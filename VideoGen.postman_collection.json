@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "8141bbb8-6a05-4377-90eb-1975d30000a9",
+		"name": "VideoGen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29988470"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jojo\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jojo\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "protected",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6Impvam8iLCJleHAiOjE2OTU2NDU3NzgsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU1NTkzNzh9.D6o_ZFcUgDSvO947h0om6cmAR6DcTFeAXEJ_5VPxnEw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6Impvam8iLCJleHAiOjE2OTU2NDU3NzgsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU1NTkzNzh9.D6o_ZFcUgDSvO947h0om6cmAR6DcTFeAXEJ_5VPxnEw\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/protected/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"protected",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU3MjIyNDMsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU2MzU4NDN9.MjFOxGUG9yc60FTv-6QkQsk-Ng-6rH9asFItI29wfao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"projet13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all projets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU3MjIyNDMsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU2MzU4NDN9.MjFOxGUG9yc60FTv-6QkQsk-Ng-6rH9asFItI29wfao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get projet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU3MjIyNDMsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU2MzU4NDN9.MjFOxGUG9yc60FTv-6QkQsk-Ng-6rH9asFItI29wfao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete project",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU3MjIyNDMsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU2MzU4NDN9.MjFOxGUG9yc60FTv-6QkQsk-Ng-6rH9asFItI29wfao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"projet13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/update/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						"update",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU3MjIyNDMsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU2MzU4NDN9.MjFOxGUG9yc60FTv-6QkQsk-Ng-6rH9asFItI29wfao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"new_title\": \"Nouveau Titre du Projet\",\n  \"new_description\": \"Nouvelle Description du Projet\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/update/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						"update",
+						"8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new clip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU4Mjc1MjYsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU3NDExMjZ9.oXQXx15Dta4ZwmpCB6KCIqSL-ozvrjj3NqcEJdM5LVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/clips/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						"clips",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get project clip",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU4MjYyNzIsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU3Mzk4NzJ9.JGkT78FAB__3ErsOIBeE1PnpAsHFgUJFbHcZrgEvL48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"project_id\" : 8,\n    \"text\" : \"text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/project/clips/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"project",
+						"clips",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set clip",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU4Mjc1MjYsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU3NDExMjZ9.oXQXx15Dta4ZwmpCB6KCIqSL-ozvrjj3NqcEJdM5LVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"new_text\" : \"le text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/clip/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"clip",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get gen text",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU4Mjc1MjYsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU3NDExMjZ9.oXQXx15Dta4ZwmpCB6KCIqSL-ozvrjj3NqcEJdM5LVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"engine\" : \"davinci\",\n    \"promp\" : \"donne moi un titre de video youtube\",\n    \"max_tokens\" : 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/textgen/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"textgen",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get text",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImpvYW5peDIiLCJleHAiOjE2OTU5MzA3MTMsImVtYWlsIjoiIiwib3JpZ19pYXQiOjE2OTU4NDQzMTN9.l2dj6rYzA595kxsPZ64_0v4mpzD86fYRAPmU45e4cm8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prompt\" : \"donne moi un titre de video youtube\"\n    \"max_tokens\" : 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/textgen/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"textgen",
+						"8",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
